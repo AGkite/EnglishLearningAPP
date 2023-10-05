@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 指定父项目为 English-Learning-SpringBoot -->
+	<parent>
+		<groupId>com.howonenew</groupId>
+		<artifactId>English-Learning-SpringBoot</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<groupId>com.howonenew</groupId>
+	<artifactId>english-learning-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>english-learning-web</name>
+	<description>english-learning-web(入口项目，负责APP前台展示相关功能，打包也放在这个模块负责)</description>
+
+	<dependencies>
+		<!--子模块相互依赖-->
+		<dependency>
+			<groupId>com.howonenew</groupId>
+			<artifactId>english-learning-admin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.howonenew</groupId>
+			<artifactId>english-learning-common</artifactId>
+		</dependency>
+		<!-- Web 依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 免写冗余的 Java 样板式代码 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- 单元测试 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
