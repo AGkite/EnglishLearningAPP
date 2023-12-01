@@ -1,0 +1,5 @@
+<!--pages/company/company.wxml-->
+<canvas canvas-id="myCanvas" style="position:absolute;border: 1px solid red; width:{{imageW}}rpx;height:{{imageH}}rpx;top:-9999px;left:-9999px;"></canvas>
+<button class="round cu-avatar" plain="true" open-type="chooseAvatar" bind:chooseavatar="getimginfo" style="border: 0;width: 158rpx;height: 158rpx;">
+    <image class="round" src="https://wx3.sinaimg.cn/orj360/6b03f0e6gy1h6c1mivf4lj20u01400wu.jpg" style="width: 158rpx;height: 158rpx;"></image>
+</button>

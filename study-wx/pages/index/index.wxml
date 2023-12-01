@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view></view>
+<view class="head">
+  <rich-text>翻译</rich-text>
+</view>
+<view class="t_c">
+  <view class="text">
+    <text class="info">请输入翻译内容：</text>
+    <!-- 输入的时候就会触发inputInfo函数，{{text}}里的text对应js的data中的text -->
+    <textarea class="my_input" rows="8" value="{{text}}" bindinput="inputInfo"></textarea>
+    <view class="action">
+      <!-- bindtap里的函数在点击对应图片时被调用 点“译”调用search函数，del函数同理（调用时清空翻译内容和翻译结构） -->
+      <image class="search" src="../images/trans.jpg" bindtap="search"></image>
+      <image class="del" bindtap="del" src="../images/del.png"></image>
+    </view>
+  </view>
+  <view class="tran_text">
+    <text class="info">翻译结果：</text>
+    <!-- {{translation}}对应data中的translation即翻译结果 -->
+    <textarea class="tran_content" rows="8" value="{{translation}}"></textarea>
+  </view>
+</view>
+

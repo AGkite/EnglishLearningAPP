@@ -1,0 +1,59 @@
+/* pages/login/login.wxss */
+/* pages/login/login.wxss */
+.content {
+  margin-top: 20px;
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.num {
+  margin: 10px;
+}
+
+.hr {
+  height: 1px;
+  width: 90%;
+  background-color: #ccc;
+  opacity: 0.2;
+}
+
+.see {
+  position: absolute;
+  right: 20px;
+}
+
+.btn {
+  margin-top: 40px;
+  color: #999;
+}
+
+.operate {
+  display: flex;
+  flex-direction: row;
+}
+
+.operate view {
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+}
+
+.login view {
+  margin: 0 auto;
+}
+

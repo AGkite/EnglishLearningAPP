@@ -1,0 +1,60 @@
+<!--pages/my/my.wxml-->
+<view class="backGround">
+  <!--pages/my/my.wxml-->
+  ​
+  <view class="container">
+    <view class="calendar-container">
+      <!-- 年月的显示 -->
+      <view class="calendar-container-header">
+        <view class="date-text">{{year}}年{{month}}月</view>
+        <view class="btn-box">
+          <view class="btn preBtn" bindtap="changeMonth" data-type="pre"></view>
+          <view class="btn nextBtn" bindtap="changeMonth" data-type="next"></view>
+        </view>
+      </view>
+      <!-- 日期的显示 -->
+      <view class="calendar-container-body">
+        <!-- 显示星期 -->
+        <view class="calendar-week">
+          <view class="calendar-week-item" wx:for="{{weeksArr}}" wx:key="index">{{item}}</view>
+        </view>
+        <!-- 显示日期 -->
+        <view class="calendar-days">
+          <!-- 上个月的日期 -->
+          <view class="days-item last-days-item {{item.isNowMonthDay}}" wx:for='{{lastMonthDays}}' wx:key='item' bindtap="selectDate" data-time="{{item.time}}" data-type="lastMonthDays" data-index="{{index}}">{{item.date}}</view>
+
+          <!--当月的日期-->
+          <view class="days-item {{item.isNowMonthDay}}" wx:for='{{nowMonthDays}}' wx:key='index' bindtap="selectDate" data-item="{{item}}" data-type="nowMonthDays" data-index="{{index}}">
+            {{item.date}}
+          </view>
+
+          <!--下个月的日期-->
+          <view class="days-item next-days-item {{item.isNowMonthDay}}" wx:for='{{nextMonthDays}}' wx:key='item' bindtap="selectDate" data-item="{{item}}" data-type="nextMonthDays" data-index="{{index}}">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<block>
+  <!-- 头像，用户名，招呼 -->
+  <view class="container-in">
+    <image src="/images/touxiang.png" class="touxiang"></image>
+    <view class="wenZi">
+      <view class="word3">
+        阿橘
+      </view>
+      <view class="word4">
+        Hi
+      </view>
+    </view>
+  </view>
+	<view class="shez" bindtap="goToLike">
+    <button>设置</button>
+  </view>
+  <view class="shouc" bindtap="gotoLogs">
+    <button>答题记录</button>
+  </view>
+  <view class="loginOut" bindtap="loginOut">
+    <button>退出登录</button>
+  </view>
+</block>

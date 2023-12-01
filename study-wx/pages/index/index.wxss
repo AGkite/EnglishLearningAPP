@@ -1,0 +1,76 @@
+/**index.wxss**/
+ 
+Page{
+  background-color: #5f8ae7;
+}
+ 
+.head{
+  font-size: 42rpx;
+  text-align: center;
+  background-color: #3d59ab;
+  padding: 10rpx;
+  color: #fff;
+}
+ 
+.info{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  color: white;
+}
+ 
+ 
+.text{
+  width: auto;
+  height: 530rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 20rpx white solid;
+}
+ 
+.my_input{
+  width: 100%;
+  height: 350rpx;
+  margin-left: 1rpx;
+  margin-right: 1rpx;
+  margin-bottom: 15rpx;
+  background-color: white;
+  border: 2rpx solid #292421;
+  color: #292421;
+}
+ 
+.action{
+  width: 100%;
+  height: 28rpx;
+  display: flex;
+  margin: 15px;
+  justify-content:space-between;
+  align-items: center;
+}
+.search{
+  width: 64rpx;
+  height: 64rpx;
+}
+ 
+.del{
+  width: 64rpx;
+  height: 64rpx;
+}
+ 
+.tran_text{
+  width: auto;
+  height: 480rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+ 
+.tran_content{
+  width: 100%;
+  height: 390rpx;
+  margin-left: 1rpx;
+  margin-right: 1rpx;
+  background-color: white;
+  border: 2rpx solid #292421;
+} 

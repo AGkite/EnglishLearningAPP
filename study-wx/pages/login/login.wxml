@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<!--pages/login/login.wxml-->
+<view class="content">
+  <view class="account">
+    <view class="title">账号</view>
+      <view class="num">
+      <input type="text" bindinput="nameInput" placeholder="账号/邮箱/手机号" placeholder-style="color:#999;" />
+       
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="account">
+      <view class="title">密码</view>
+      <view class="num">
+          <input type="password" bindblur="passwordBlur" placeholder="请输入密码" placeholder-style="color:#999;" />
+        </view>
+      <view class="see">
+      <image src="/images/see-no.png" style="width: 42px; height:32px;" />
+       
+    </view>
+  </view>
+  <view class="hr"></view>
+  <button class="btn" disabled="{{disabled}}" type="{{btnType}}" bindtap="gotoindex">登录</button>
+  <view class="operate">
+      <view>
+          <navigator url="../mobile/mobile">手机快速注册</navigator>
+        </view>
+      <view>
+          <navigator url="../company/company">企业用户注册</navigator>
+        </view>
+  </view>
+  <view class="login">
+      <view>
+          <image src="../images/wx.jpg" style="width:70px;height:98px;"></image>
+					微信登录
+        </view>
+      <view>
+          <image src="../images/qq.png" style="width:70px;height:98px;"></image>
+					qq登录
+        </view>
+  </view>
+</view>
+

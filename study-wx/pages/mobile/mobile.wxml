@@ -1,0 +1,18 @@
+<!--pages/mobile/mobile.wxml-->
+<view class="login">
+  <image class="logo" src="../images/1.png"></image>
+  <form bindsubmit="onSubmit">
+    <view class="input-item">
+      <input placeholder="请输入手机号" bindinput="onInputPhone" maxlength="11" type="number" required></input>
+    </view>
+    <view class="input-item">
+      <input placeholder="请输入验证码" bindinput="onInputCode" maxlength="6" type="number" required></input>
+      <button class="code-btn" bindtap="onGetCode" disabled="{{disabled}}" class="{{disabled?'disabled':''}}">{{codeText}}</button>
+    </view>
+    <view class="checkbox-item">
+      <checkbox value="{{agreement}}" bindchange="onAgree">我已阅读并同意《用户条款》</checkbox>
+    </view>
+    <button class="login-btn" bindtap="gotoindex"type="primary" form-type="submit" disabled="{{agreement}}">登录</button>
+  </form>
+</view>
+
