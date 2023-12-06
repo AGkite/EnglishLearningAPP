@@ -9,7 +9,6 @@
 		<version>${revision}</version>
 	</parent>
 
-	<groupId>com.howonenew</groupId>
 	<artifactId>english-learning-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>english-learning-web</name>
@@ -41,6 +40,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- knife4j（API 文档工具） -->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
 		</dependency>
 	</dependencies>
 

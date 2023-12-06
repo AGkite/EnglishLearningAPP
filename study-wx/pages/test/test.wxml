@@ -31,6 +31,7 @@
     <view class='mybutton'>
       <button bindtap='nextSubmit' wx:if="{{index == questionList.length-1}}">提交</button>
       <button bindtap='nextSubmit' wx:else>下一题</button>
+      <text bindtap='lastSubmit' class="last-but" wx:if="{{index != 0}}">上一题</text>
       <text bindtap='outTest' class="toindex-btn">退出答题</text>
     </view>
   </view>

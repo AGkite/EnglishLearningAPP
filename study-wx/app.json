@@ -3,9 +3,8 @@
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
-    
     "pages/mobile/mobile",
-		"pages/company/company",
+    "pages/company/company",
     "pages/my/my",
     "pages/test/test",
     "pages/results/results",

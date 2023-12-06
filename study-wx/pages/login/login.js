@@ -10,7 +10,7 @@ Page({
   data: {
     disabled: true,
     btnType: "default",
-    name: "",
+    username: "",
     password: ""
   },
 
@@ -19,7 +19,7 @@ Page({
   nameInput(e) {
     var account = e.detail.value; //获取账号的值
     if (account != "") {
-      this.setData({ disabled: false, btnType: "primary", name: account });
+      this.setData({ disabled: false, btnType: "primary", username: account });
     }
   },
 
@@ -30,9 +30,44 @@ Page({
       this.setData({ password: pwd });
     }
   },
-  gotoindex:function(){
-    wx.switchTab({
-      url: '../my/my',
+  toLogin:function(){
+    wx.request({
+        url: 'http://localhost:8080/api/login',
+        method: 'POST',
+        header: {
+            'content-type': 'application/json'
+        },
+        data: {
+            username: this.data.username,
+            password: this.data.password
+        },
+        success: function (res) {
+            // 登录成功的处理逻辑
+            if (res.data.success) {
+                // 登录成功的处理逻辑
+                console.log(res.data.message); // 输出服务端返回的消息
+                wx.switchTab({
+                  url: '../my/my',
+                });
+              } else {
+                // 登录失败的处理逻辑
+                //console.error(res.data.message); // 输出错误信息
+                wx.showToast({
+                  title: '登录失败: ' + res.data.message,
+                  icon: 'none',
+                  duration: 2000
+                });
+              }
+          },
+          fail: function (res) {
+            // 登录失败的处理逻辑
+            console.error(res.data); // 输出错误信息
+            wx.showToast({
+                title: '网络请求失败，请重试',
+                icon: 'none',
+                duration: 2000
+              });
+          }
     })
   },
   /**

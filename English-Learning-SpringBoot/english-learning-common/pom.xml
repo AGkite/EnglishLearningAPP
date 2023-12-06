@@ -7,7 +7,6 @@
         <artifactId>English-Learning-SpringBoot</artifactId>
         <version>${revision}</version>
     </parent>
-    <groupId>com.howonenew</groupId>
     <artifactId>english-learning-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>english-learning-common</name>
@@ -45,6 +44,10 @@
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
     </dependencies>
 

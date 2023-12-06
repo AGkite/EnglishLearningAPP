@@ -1,0 +1,7 @@
+[TraceId: ] 2023-12-05 20:18:54.738 [main] INFO  c.howonenew.web.EnglishLearningWebApplicationTests - Starting EnglishLearningWebApplicationTests using Java 1.8.0_351 on LAPTOP-PNSKHFGS with PID 24528 (started by newone in E:\gitee\English-Learning-App\English-Learning-SpringBoot\english-learning-web)
+[TraceId: ] 2023-12-05 20:18:54.739 [main] INFO  c.howonenew.web.EnglishLearningWebApplicationTests - The following profiles are active: prod
+[TraceId: ] 2023-12-05 20:18:56.793 [main] INFO  c.howonenew.web.EnglishLearningWebApplicationTests - Started EnglishLearningWebApplicationTests in 2.471 seconds (JVM running for 3.12)
+[TraceId: ] 2023-12-05 20:18:56.954 [main] INFO  c.howonenew.web.EnglishLearningWebApplicationTests - 这是一行 Info 级别日志
+[TraceId: ] 2023-12-05 20:18:56.955 [main] WARN  c.howonenew.web.EnglishLearningWebApplicationTests - 这是一行 Warn 级别日志
+[TraceId: ] 2023-12-05 20:18:56.955 [main] ERROR c.howonenew.web.EnglishLearningWebApplicationTests - 这是一行 Error 级别日志
+[TraceId: ] 2023-12-05 20:18:56.955 [main] INFO  c.howonenew.web.EnglishLearningWebApplicationTests - 这是一行带有占位符日志，作者：newone

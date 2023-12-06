@@ -8,7 +8,6 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.howonenew</groupId>
     <artifactId>English-Learning-SpringBoot</artifactId>
     <version>${revision}</version>
@@ -47,6 +46,7 @@
         <jackson.version>2.15.2</jackson.version>
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <p6spy.version>3.9.1</p6spy.version>
+        <knife4j.version>4.3.0</knife4j.version>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -95,6 +95,12 @@
                 <groupId>p6spy</groupId>
                 <artifactId>p6spy</artifactId>
                 <version>${p6spy.version}</version>
+            </dependency>
+            <!-- knife4j（API 文档工具） -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
