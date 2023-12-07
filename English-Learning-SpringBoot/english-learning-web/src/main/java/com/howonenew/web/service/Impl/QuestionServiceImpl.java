@@ -18,8 +18,8 @@ public class QuestionServiceImpl implements QuestionService {
     private QuestionMapper questionMapper;
 
     @Override
-    public List<Map<String, Object>> getQuestions() {
-        return questionMapper.getQuestionEntities().stream()
+    public List<Map<String, Object>> getQuestions(Integer courseId) {
+        return questionMapper.getQuestionEntities(courseId).stream()
                 .map(this::mapQuestionEntityToResponse)
                 .collect(Collectors.toList());
     }

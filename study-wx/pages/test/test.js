@@ -13,19 +13,25 @@ Page({
         wx.setNavigationBarTitle({
             title: options.testId
         }) // 动态设置导航条标题
-
-        this.setData({
-            questionList: app.globalData.questionList[options.testId], // 拿到答题数据
-            testId: options.testId // 课程ID
-        })
-        console.log(this.data.questionList);
-        console.log(this.data.testId);
-
-        let count = this.generateArray(0, this.data.questionList.length - 1); // 生成题序
-        let num = options.testId == '102' || options.testId == '301-302' ? 20 : 10; // 102/301-302 试题有20道题
-        this.setData({
-            shuffleIndex: this.shuffle(count).slice(0, num) // 生成随机题序 [2,0,3] 并截取num道题
-        })
+        const courseId = options.testId
+        wx.request({
+            url: `http://127.0.0.1:8080/api/questions/getQuestions/${courseId}`,
+            method: 'GET',
+            success: (res) => {
+                this.setData({
+                    questionList: res.data,
+                    testId: options.testId
+                });
+                let count = this.generateArray(0, this.data.questionList.length - 1); // 生成题序
+                let num = options.testId == '102' || options.testId == '301-302' ? 20 : 10; // 102/301-302 试题有20道题
+                this.setData({
+                    shuffleIndex: this.shuffle(count).slice(0, num) // 生成随机题序 [2,0,3] 并截取num道题
+                })
+            },
+            fail: (err) => {
+                console.error('Failed to fetch questionList:', err);
+            }
+        });
     },
     /*
      * 数组乱序/洗牌
