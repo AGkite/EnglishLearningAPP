@@ -1,14 +1,20 @@
-import Index from '@/pages/admin/index.vue'
+import Admin from '@/components/admin/admin.vue'
+import AdminIndex from '@/pages/admin/index.vue'
 import Login from '@/pages/admin/login.vue'
+import AdminCourseList from '@/pages/admin/course-list.vue'
+import AdminArticleList from '@/pages/admin/article-list.vue'
+import AdminProblemList from '@/pages/admin/problem-list.vue'
+import AdminAppSetting from '@/pages/admin/app-setting.vue'
+
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 // 统一在这里声明所有路由
 const routes = [
     {
         path: '/', // 路由地址
-        component: Index, // 对应组件
+        component: Login, // 对应组件
         meta: { // meta 信息
-            title: '后台首页' // 页面标题
+            title: '登录页' // 页面标题
         }
     },
     {
@@ -17,7 +23,50 @@ const routes = [
         meta: {
             title: '登录页'
         }
+    },
+    {
+        path: "/admin", // 后台首页
+        component: Admin, // 对应 admin.vue 布局文件
+        // 使用到 admin.vue 布局的，都需要放置在其子路由下面
+        children: [
+            {
+                path: "/admin/index",
+                component: AdminIndex,
+                meta: {
+                    title: '仪表盘'
+                }
+            },
+            {
+                path: "/admin/course/list",
+                component: AdminCourseList,
+                meta: {
+                    title: '课程管理'
+                }
+            },
+            {
+                path: '/admin/article/list',
+                component: AdminArticleList,
+                meta: {
+                    title: '文章管理'
+                }
+            },{
+                path: '/admin/problem/list',
+                component: AdminProblemList,
+                meta: {
+                    title: '问题管理'
+                }
+            },
+            {
+                path: '/admin/app/setting',
+                component: AdminAppSetting,
+                meta: {
+                    title: '应用设置'
+                }
+            }
+        ]
+        
     }
+
 ]
 
 // 创建路由

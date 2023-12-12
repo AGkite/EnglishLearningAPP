@@ -89,7 +89,7 @@ const onSubmit = () => {
                 userStore.setUserInfo(adminLoginRequest.username)
 
                 //跳转到首页
-                router.push('/')
+                router.push('/admin/index')
 
             } else {
                 let message = res.data.message

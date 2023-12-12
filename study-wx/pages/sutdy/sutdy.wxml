@@ -1,0 +1,34 @@
+<!--pages/word.wxml-->
+<view>
+    <!-- 轮播图 -->
+    <swiper class="cover_swiper" indicator-dots='true' display-multiple-items='1' current='{{ centerItem }}' bindchange='handleSwiperChange' previous-margin='30' next-margin='30' autoplay='true' circular='true' interval='3000'>
+        <block wx:for="{{coverList}}" wx:key="id">
+            <swiper-item>
+                <view class='imageBox' style='text-align:center'>
+                    <view class='mask' wx:if='{{ index != centerItem }}'></view>
+                    <image src="{{item.url}}" mode='aspectFit' />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!-- 单词分类选项 -->
+    <scroll-view class="scroll-view" scroll-x="false" scroll-y="true" enable-flex="true" style="height: 220px;">
+        <view wx:for="{{categories}}" wx:key="id" wx:for-item="item" wx:for-index="index" class="category-btn" bindtap="onCategoryTap" data-index="{{index}}">
+            <text class="category-text">{{item.name}}</text>
+        </view>
+    </scroll-view>
+
+    <!-- 英语文章阅读 -->
+    <scroll-view scroll-y="true">
+        <!-- 文章列表项 -->
+        <view>
+            <image></image> <!-- 文章图片 -->
+            <view>
+                <text>文章标题</text> <!-- 文章标题 -->
+                <text>简要描述</text> <!-- 文章简要描述 -->
+            </view>
+        </view>
+        <!-- 其他文章列表项，类似上述结构 -->
+    </scroll-view>
+</view>

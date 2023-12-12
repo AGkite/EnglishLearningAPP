@@ -8,7 +8,8 @@
     "pages/my/my",
     "pages/test/test",
     "pages/results/results",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/sutdy/sutdy"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,6 +35,12 @@
         "iconPath": "images/icon_component.png",
         "selectedIconPath": "images/icon_component_HL.png",
         "text": "答题"
+      },
+      {
+        "pagePath": "pages/sutdy/sutdy",
+        "text": "学习",
+        "iconPath": "/images/sutdy.png",
+        "selectedIconPath": "/images/sutdy_yes.png"
       },
       {
         "pagePath": "pages/my/my",

@@ -1,0 +1,43 @@
+/* pages/word.wxss */
+/* 轮播图 */
+.cover_swiper {
+    height: 220px;
+}
+
+.cover_swiper .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 横向按钮 */
+/* 小程序组件样式 */
+.scroll-view {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.category-btn {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    padding: 15px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    background-color: rgb(72, 202, 55);
+}
+
+.category-btn:hover {
+    background-color: #f5a86a;
+}
+
+.category-text {
+    font-size: 14px;
+    color: #333;
+}

@@ -49,7 +49,7 @@
     </view>
   </view>
 	<view class="shez" bindtap="goToLike">
-    <button>设置</button>
+    <button>个人信息</button>
   </view>
   <view class="shouc" bindtap="gotoLogs">
     <button>答题记录</button>

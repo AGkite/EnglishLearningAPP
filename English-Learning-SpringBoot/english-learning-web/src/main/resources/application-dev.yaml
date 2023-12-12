@@ -17,3 +17,10 @@ spring:
       max-lifetime: 1800000 # 连接在连接池中的最大存活时间，超过这个时间会被强制关闭。
       connection-timeout: 30000 # 连接的超时时间
       connection-test-query: SELECT 1 # 用于测试连接是否可用的SQL查询
+# 阿里云OSS配置
+aliyun:
+  oss:
+    end-point: oss-cn-hongkong.aliyuncs.com
+    access-key-id: LTAI5tAMhQuxc5y5TnNMoCvU
+    access-key-secret: iRDCpTcVvt6hZ3WVq3vAn2fSMPQyad
+    bucket-name: newonebucket
