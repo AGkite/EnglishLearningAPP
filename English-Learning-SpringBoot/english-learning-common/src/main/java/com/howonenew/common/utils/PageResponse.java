@@ -18,7 +18,7 @@ public class PageResponse<T> extends Response<List<T>> {
     /**
      * 每页显示的记录数，默认每页显示 10 条
      */
-    private long size = 10L;
+    private long size = 5L;
 
     /**
      * 当前页码
@@ -41,7 +41,7 @@ public class PageResponse<T> extends Response<List<T>> {
         PageResponse<T> response = new PageResponse<>();
         response.setSuccess(true);
         response.setCurrent(Objects.isNull(page) ? 1L : page.getCurrent());
-        response.setSize(Objects.isNull(page) ? 10L : page.getSize());
+        response.setSize(Objects.isNull(page) ? 5L : page.getSize());
         response.setPages(Objects.isNull(page) ? 0L : page.getPages());
         response.setTotal(Objects.isNull(page) ? 0L : page.getTotal());
         response.setData(data);

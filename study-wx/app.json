@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/index/index",
+    "pages/translate/translate",
     "pages/logs/logs",
     "pages/mobile/mobile",
     "pages/company/company",
@@ -9,7 +9,8 @@
     "pages/test/test",
     "pages/results/results",
     "pages/home/home",
-    "pages/sutdy/sutdy"
+    "pages/sutdy/sutdy",
+    "pages/word/word"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,10 +26,10 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "/images/book_shop_no.png",
-        "selectedIconPath": "/images/book_shop_yes.png"
+        "pagePath": "pages/sutdy/sutdy",
+        "text": "学习",
+        "iconPath": "/images/sutdy.png",
+        "selectedIconPath": "/images/sutdy_yes.png"
       },
       {
         "pagePath": "pages/home/home",
@@ -37,10 +38,10 @@
         "text": "答题"
       },
       {
-        "pagePath": "pages/sutdy/sutdy",
-        "text": "学习",
-        "iconPath": "/images/sutdy.png",
-        "selectedIconPath": "/images/sutdy_yes.png"
+        "pagePath": "pages/translate/translate",
+        "text": "翻译",
+        "iconPath": "/images/book_shop_no.png",
+        "selectedIconPath": "/images/book_shop_yes.png"
       },
       {
         "pagePath": "pages/my/my",

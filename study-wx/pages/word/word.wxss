@@ -1,0 +1,60 @@
+/* wordList.wxss */
+
+.word-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .word {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .pronunciation {
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  .options-container {
+    margin-top: 16px;
+  }
+  
+  .option-item, .selected-option {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .selected-option {
+    background-color: #4CAF50; /* 绿色 */
+    color: white;
+  }
+  
+  .translation {
+    margin-top: 16px;
+  }
+  
+  .translate-title {
+    font-weight: bold;
+  }
+  
+  .toggle-btn, .next-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .next-btn {
+    background-color: #008CBA;
+    margin-left: 10px;
+  }
+  

@@ -1,2 +1,21 @@
-<!--pages/word/word.wxml-->
-<text>pages/word/word.wxml</text>
+<!-- wordList.wxml -->
+
+<view class="word-container">
+  <text class="word">{{wordList[currentIndex].word}}</text>
+  <text class="pronunciation">{{wordList[currentIndex].pronunciation}}</text>
+
+  <view class="options-container">
+    <!-- Display translation options as buttons -->
+    <button wx:for="{{options}}" wx:key="index" class="{{selectedOptionIndex === index ? 'selected-option' : 'option-item'}}" bindtap="selectOption" data-index="{{index}}">
+      {{index+1}}. {{item}}
+    </button>
+  </view>
+
+  <view class="translation" wx:if="{{showTranslation}}">
+    <text class="translate-title">正确翻译：</text>
+    <text class="translate-content">{{wordList[currentIndex].translate}}</text>
+  </view>
+
+  <button class="toggle-btn" bindtap="toggleTranslation">切换翻译</button>
+  <button class="next-btn" bindtap="nextWord">下一个</button>
+</view>

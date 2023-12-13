@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    wordList: [], // 初始化单词列表为空数组
+    currentIndex: 0, // 当前显示的单词索引
+    showTranslation: false, // 是否显示翻译
+    options: [], // 存储翻译选项
+    selectedOptionIndex: null // 用户选择的选项索引
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+       // 在页面加载时调用获取单词列表的方法
+       this.getWordList();
   },
 
   /**

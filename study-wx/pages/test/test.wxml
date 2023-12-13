@@ -21,7 +21,7 @@
       </label>
     </checkbox-group>
     <radio-group class="radio-group" bindchange="radioChange" wx:else>
-      <label class="radio my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}">
+      <label class="radio my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}" wx:key="index">
         <radio value="{{item}}" checked="{{questionList[shuffleIndex[index]].checked}}"/>{{item}}
       </label>
     </radio-group>
