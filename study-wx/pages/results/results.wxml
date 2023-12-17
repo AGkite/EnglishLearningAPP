@@ -15,7 +15,7 @@
   <view class='page-footer'>
     <view class="wrong-view" wx:if="{{wrongList.length > 0}}">
       <text>错误的题数：</text>
-      <text wx:for="{{wrongListSort}}">[{{item-0+1}}]</text> 题
+      <text wx:for="{{wrongListSort}}" wx:key="index">[{{item-0+1}}]</text> 题
     </view>
     <view class="wrong-btns">
       <button type="default" bindtap="toView" hover-class="other-button-hover" class="wrong-btn" wx:if="{{wrongList.length > 0}}"> 点击查看 </button>

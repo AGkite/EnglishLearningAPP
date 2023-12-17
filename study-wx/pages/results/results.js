@@ -6,11 +6,11 @@ Page({
     wrongList: [], // 错误的题数-乱序
     wrongListSort: [],  // 错误的题数-正序
     chooseValue: [], // 选择的答案
+    questionList: [],
     remark: ["好极了！你很棒棒哦","哎哟不错哦","别灰心，继续努力哦！"], // 评语
     modalShow: false
   },
   onLoad: function (options) {
-    console.log(options);
     wx.setNavigationBarTitle({ title: options.testId }) // 动态设置导航条标题
     
     let wrongList = JSON.parse(options.wrongList);
@@ -24,7 +24,6 @@ Page({
       questionList: app.globalData.questionList[options.testId],  // 拿到答题数据
       testId: options.testId  // 课程ID
     })
-    console.log(this.data.chooseValue);
   },
   // 查看错题
   toView: function(){

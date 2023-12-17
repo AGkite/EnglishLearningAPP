@@ -38,7 +38,7 @@
 <block>
   <!-- 头像，用户名，招呼 -->
   <view class="container-in">
-    <image src="/images/touxiang.png" class="touxiang"></image>
+    <image src="https://newonebucket.oss-cn-hongkong.aliyuncs.com/mall/touxiang.png" class="touxiang"></image>
     <view class="wenZi">
       <view class="word3">
         阿橘

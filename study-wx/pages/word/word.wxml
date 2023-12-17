@@ -16,6 +16,6 @@
     <text class="translate-content">{{wordList[currentIndex].translate}}</text>
   </view>
 
-  <button class="toggle-btn" bindtap="toggleTranslation">切换翻译</button>
+  <button class="toggle-btn" bindtap="toggleTranslation">查看翻译</button>
   <button class="next-btn" bindtap="nextWord">下一个</button>
 </view>

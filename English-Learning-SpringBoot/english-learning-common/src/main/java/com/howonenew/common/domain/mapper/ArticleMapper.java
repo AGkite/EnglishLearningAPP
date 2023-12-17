@@ -14,4 +14,7 @@ public interface ArticleMapper extends BaseMapper<ArticleDO> {
 
     @Insert("INSERT INTO t_article_content(article_id,content) VALUES (#{articleId},#{content})")
     int addContent(@Param("articleId") Integer article,@Param("content") String content);
+//
+//    @Select("SELECT a.title, a.cover, a.summary, a.create_time, a.read_num, ac.content FROM " +
+//            "t_article AS a JOIN t_article_content AS ac ON a.article_id = ac.article_id;")
 }

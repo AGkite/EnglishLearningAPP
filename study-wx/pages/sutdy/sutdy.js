@@ -138,6 +138,18 @@ Page({
     onLoad(options) {
         this.getArticleList()
     },
+    toWord: function(e) {
+        var index = e.currentTarget.dataset.index;
+        wx.navigateTo({
+          url: '../word/word?courseId=' + this.data.categories[index].id
+        })
+    },
+    toArticle: function(e) {
+        var id = e.currentTarget.dataset.index;
+        wx.navigateTo({
+            url: '../article/article?articleId=' + id
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成

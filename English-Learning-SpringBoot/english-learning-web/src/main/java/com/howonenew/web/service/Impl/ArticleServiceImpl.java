@@ -7,6 +7,7 @@ import com.howonenew.common.domain.mapper.ArticleMapper;
 import com.howonenew.common.model.BasePageQuery;
 import com.howonenew.common.utils.PageResponse;
 import com.howonenew.web.model.ArticlePageListRspVO;
+import com.howonenew.web.model.ArticleRspVO;
 import com.howonenew.web.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,5 +49,19 @@ public class ArticleServiceImpl implements ArticleService {
         }
 
         return PageResponse.success(articleDOPage,vos);
+    }
+
+    @Override
+    public ArticleRspVO getArticle(Integer articleId) {
+        ArticleDO articleDO = articleMapper.selectById(articleId);
+        String content = articleMapper.getContent(articleId);
+        return ArticleRspVO.builder()
+                .title(articleDO.getTitle())
+                .summary(articleDO.getSummary())
+                .cover(articleDO.getCover())
+                .createTime(articleDO.getCreateTime())
+                .readNum(articleDO.getReadNum())
+                .content(content)
+                .build();
     }
 }

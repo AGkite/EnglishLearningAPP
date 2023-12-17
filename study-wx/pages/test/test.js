@@ -7,9 +7,9 @@ Page({
         wrong: 0, // 错误的题目数量
         wrongList: [], // 错误的题目集合-乱序
         wrongListSort: [], // 错误的题目集合-正序
+        questionList: []
     },
     onLoad: function (options) {
-        console.log(options);
         wx.setNavigationBarTitle({
             title: options.testId
         }) // 动态设置导航条标题
@@ -130,8 +130,9 @@ Page({
             let wrongList = JSON.stringify(this.data.wrongList);
             let wrongListSort = JSON.stringify(this.data.wrongListSort);
             let chooseValue = JSON.stringify(this.data.chooseValue);
+            console.log("data",wrongList)
             wx.navigateTo({
-                url: '../results/results?totalScore=' + this.data.totalScore + '&wrongList=' + wrongList + '&chooseValue=' + chooseValue + '&wrongListSort=' + wrongListSort + '&testId=' + this.data.testId
+                url: '../results/results?totalScore=' + this.data.totalScore + '&wrongList=' + wrongList + '&chooseValue=' + chooseValue + '&wrongListSort=' + wrongListSort + '&questionList='+ this.data.questionList + '&testId=' + this.data.testId
             })
 
             // 设置缓存

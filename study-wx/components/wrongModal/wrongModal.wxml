@@ -10,17 +10,17 @@
     </view>
     <view class="modal-body">
       <radio-group class="radio-group" bindchange="radioChange" wx:if="{{questionList[wrongList[index]].type == 1}}">
-        <label class="radio my-choosebox" wx:for="{{questionList[wrongList[index]].option}}" wx:for-index="key"  wx:for-item="value">
+        <label class="radio my-choosebox" wx:for="{{questionList[wrongList[index]].option}}" wx:for-index="key"  wx:for-item="value" wx:key="index">
           <radio disabled="{{true}}" value="{{key}}" checked="{{questionList[wrongList[index]].checked}}"/>{{key}}、{{value}}
         </label>
       </radio-group>
       <checkbox-group bindchange="checkboxChange" wx:elif="{{questionList[shuffleIndex[index]].type == 2}}">
-        <label class="checkbox my-choosebox" wx:for="{{questionList[wrongList[index]].option}}" wx:for-index="key"  wx:for-item="value">
+        <label class="checkbox my-choosebox" wx:for="{{questionList[wrongList[index]].option}}" wx:for-index="key"  wx:for-item="value" wx:key="index">
           <checkbox disabled="{{true}}" value="{{key}}" checked="{{questionList[wrongList[index]].checked}}"/>{{key}}、{{value}}
         </label>
       </checkbox-group>
       <radio-group class="radio-group" bindchange="radioChange" wx:else>
-        <label class="radio my-choosebox" wx:for="{{questionList[wrongList[index]].option}}">
+        <label class="radio my-choosebox" wx:for="{{questionList[wrongList[index]].option}}" wx:key="index">
           <radio disabled="{{true}}" value="{{item}}" checked="{{questionList[wrongList[index]].checked}}"/>{{item}}
         </label>
       </radio-group>

@@ -15,13 +15,13 @@
     <!-- 单词分类选项 -->
     <scroll-view class="scroll-view" scroll-x="false" scroll-y="true" enable-flex="true" style="height: 220px;">
         <view wx:for="{{categories}}" wx:key="id" wx:for-item="item" wx:for-index="index" class="category-btn" data-index="{{index}}">
-            <text class="category-text">{{item.name}}</text>
+            <text bindtap="toWord" data-index="{{index}}" class="category-text">{{item.name}}</text>
         </view>
     </scroll-view>
 
     <!-- 英语文章阅读 -->
-    <view class="article-item" wx:for="{{articleList}}" wx:key="id">
-            <!-- 文章列表项 -->
+    <view class="article-item" wx:for="{{articleList}}" wx:key="id" bindtap="toArticle" data-index="{{item.id}}">
+        <!-- 文章列表项 -->
         <view class="thumb">
             <image src="{{item.cover}}"></image><!-- 文章图片 -->
         </view>
@@ -31,5 +31,4 @@
             <text>{{item.createTime}}</text><!-- 文章发布时间 -->
         </view>
     </view>
-
 </view>

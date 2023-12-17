@@ -10,7 +10,8 @@
     "pages/results/results",
     "pages/home/home",
     "pages/sutdy/sutdy",
-    "pages/word/word"
+    "pages/word/word",
+    "pages/article/article"
   ],
   "window": {
     "backgroundTextStyle": "light",

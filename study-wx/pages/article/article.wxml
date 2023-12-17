@@ -1,0 +1,26 @@
+<!-- article.wxml -->
+<view class="article-container">
+  <!-- 文章标题 -->
+  <text class="article-title">{{articleData.title}}</text>
+  
+  <!-- 分割线 -->
+  <view class="divider">
+    <text class="create-time">发布时间：{{articleData.createTime}}</text>
+  </view>
+  
+  <!-- 封面图片 -->
+  <image class="cover" src="{{articleData.cover}}"></image>
+  
+  <!-- 文章内容 -->
+  <rich-text class="article-content" nodes="{{articleData.content}}"></rich-text>
+  
+  <!-- 阅读量 -->
+  <view class="read-num">
+    <text class="read-label">阅读量：</text>
+    <text class="read-count">{{articleData.readNum}}</text>
+  </view>
+  
+  <!-- 打赏按钮 -->
+  <button class="reward-btn">打赏</button>
+</view>
+

@@ -1,5 +1,5 @@
 var json = {
-  "101-1": [
+  "101": [
     {
       "question": "Mary has a _______ view of our future. But nobody believes what she said.",
       "option": {
@@ -157,7 +157,7 @@ var json = {
       "checked": false
     },
   ],
-  "101-2": [
+  "102": [
     {
       "question": "Professor Smith _______the most important part in his paper.",
       "option": {
@@ -315,7 +315,7 @@ var json = {
       "checked": false
     },
   ],
-  "102": [
+  "103": [
     {
       "question": "This company provides a very good _______ service for its products.",
       "option": {

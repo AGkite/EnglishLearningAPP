@@ -6,7 +6,7 @@
       <view class="th">试题</view>
       <view class="th ">得分</view>
     </view>
-    <block wx:for="{{logs}}" wx:for-item="item">
+    <block wx:for="{{logs}}" wx:for-item="item" wx:key="index">
       <view class="tr">
         <view class="td first">{{item.date}}</view>
         <view class="td">{{item.testId}}</view>
