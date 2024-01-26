@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.howonenew.common.domain.dos.UserDO;
 import com.howonenew.common.domain.mapper.UserMapper;
 import com.howonenew.web.service.UserService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

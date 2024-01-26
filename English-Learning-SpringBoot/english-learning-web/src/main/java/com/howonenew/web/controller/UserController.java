@@ -4,9 +4,12 @@ import com.howonenew.common.enums.ResponseCodeEnum;
 import com.howonenew.common.utils.Response;
 import com.howonenew.web.model.LoginRequest;
 import com.howonenew.web.service.UserService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -19,7 +22,7 @@ public class UserController {
         String password = loginRequest.getPassword();
         boolean login = userService.login(username, password);
         if (login) {
-            return Response.success("登录成功！");
+            return Response.success("登录成功!");
         }
         return  Response.fail(ResponseCodeEnum.LOGIN_FAIL.getErrorMessage());
     }
